@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <img src="assets/img/logo.png-1" class="logo">
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg-color">
+  <ion-list>
+    <ion-item (click)="edit()">
+      <ion-avatar item-left>
+        <img src="{{avatarPath}}">
+      </ion-avatar>
+      <h2>{{userInfo?.username}}</h2>
+      <p>{{userInfo?.description}}</p>
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name='chatbubbles' item-left></ion-icon>
+      消息
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name='ionitron' item-left></ion-icon>
+      我的管家
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name='log-in' item-left color='danger'></ion-icon>
+      我的服务
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='log-in' item-left color='danger'></ion-icon>
+      我的预定
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='log-in' item-left color='danger'></ion-icon>
+      我的合同
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='log-in' item-left color='danger'></ion-icon>
+      我的订单
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='log-in' item-left color='danger'></ion-icon>
+      我的优惠券
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="information-circle" item-left  color="secondary"></ion-icon>
+      投诉建议
+      <ion-icon name='ios-arrow-forward' item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name='settings' item-left color='primary'></ion-icon>
+      设置
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

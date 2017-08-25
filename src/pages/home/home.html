@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <img src="assets/img/logo-1.png" class="logo">
+  </ion-navbar>
+</ion-header>
+<ion-content no-bounce>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image" />
+      <div class="box">
+        <h3 class="slide-title" [innerHTML]="slide.title"></h3>
+        <span class="shortline"></span>
+        <article [innerHTML]="slide.description"></article>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

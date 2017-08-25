@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>个人信息</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openEdit()">
+        <ion-icon name="ios-create-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-left >
+        <img [src]="avatarPath">
+      </ion-avatar>
+      <h2>{{userInfo.name}}</h2>
+      <p>这是条信息介绍</p>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+    </ion-item>
+    <ion-item>
+      姓名：{{userInfo.username}}
+    </ion-item>
+    <ion-item>
+      昵称：{{userInfo.phone}}
+    </ion-item>
+    <ion-item>
+      手机号：{{userInfo.email}}
+    </ion-item>
+    <ion-item>
+      性别：{{userInfo.sex}}
+    </ion-item>
+    <ion-item>
+      生日：{{userInfo.email}}
+    </ion-item>
+    <ion-item>
+      证件类型：{{userInfo.card_type}}
+    </ion-item>
+    <ion-item>
+      证件号：{{userInfo.email}}
+    </ion-item>
+    <ion-item>
+      职业：{{userInfo.email}}
+    </ion-item>
+    <ion-item>
+      兴趣爱好：{{userInfo.hobbies}}
+    </ion-item>
+  </ion-list>
+</ion-content>
