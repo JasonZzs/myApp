@@ -10,12 +10,12 @@ import { ProductDetailPage } from './product-detail/product-detail';
 
 
 @Component({
-  selector: 'page-product',
-  templateUrl: 'product.html',
+  selector: 'page-products',
+  templateUrl: 'products.html',
 })
-export class ProductPage {
+export class ProductsPage {
 
-  productLists: any ;
+  productsList: any ;
   constructor(
     public actionSheetCtrl: ActionSheetController,
     public navCtrl: NavController,
@@ -24,9 +24,9 @@ export class ProductPage {
   ) {}
 
   ionViewDidLoad() {
-    this.httpData.getProducts().subscribe((productLists: any[]) => {
-      console.log(productLists)
-      this.productLists = productLists;
+    this.httpData.getProducts().subscribe((productsList: any[]) => {
+      console.log(productsList)
+      this.productsList = productsList;
     });
   }
 
