@@ -12,9 +12,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ProjectsPage } from '../pages/projects/projects';
 import { CommunityPage } from '../pages/community/community';
-import { SeriesPage } from '../pages/series/series';
+import { ProductsPage } from '../pages/products/products';
+import { ProductDetailPage } from '../pages/products/product-detail/product-detail';
 import { AboutPage } from '../pages/about/about';
-
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
@@ -29,9 +29,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MineModule } from "../pages/mine/mine.module";
 /*====================Module End======================*/
 
+/*====================Provider Start====================*/
+import { HttpData } from '../providers/http-data';
+/*====================Provider End======================*/
 
-// The translate loader needs to know where to load i18n files
-// in Ionic's static asset pipeline.
+
 export function HttpLoaderFactory(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -45,7 +47,8 @@ export function HttpLoaderFactory(http: Http) {
     HomePage,
     ProjectsPage,
     CommunityPage,
-    SeriesPage,
+    ProductsPage,
+    ProductDetailPage,
     TabsPage,
     TutorialPage,
     WelcomePage
@@ -70,13 +73,15 @@ export function HttpLoaderFactory(http: Http) {
     HomePage,
     ProjectsPage,
     CommunityPage,
-    SeriesPage,
+    ProductsPage,
+    ProductDetailPage,
     TabsPage,
     TutorialPage,
     WelcomePage
   ],
   providers: [
     StatusBar,
+    HttpData,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

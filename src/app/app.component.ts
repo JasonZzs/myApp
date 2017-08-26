@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 
 /*页面引入*/
-import { FirstRunPage } from '../pages/pages';
+// import { FirstRunPage } from '../pages/pages';
 import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -22,7 +22,7 @@ import { TranslateService } from '@ngx-translate/core'
 })
 
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = TabsPage;
 
   @ViewChild(Nav) nav: Nav;
 
