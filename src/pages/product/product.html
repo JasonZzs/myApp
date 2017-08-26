@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <img src="assets/img/sarah-avatar.png" class="logo">
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list [virtualScroll]="productLists">
+    <ion-grid>
+      <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let product" approxItemHeight="50px" (click)="openProduct(product)">
+        <img src="{{product.img}}" class="img_padding">
+        <h3 class="h_padding">{{product.title}}</h3>
+        <p class="p_padding">{{product.desc}}</p>
+      </ion-col>
+    </ion-grid>
+  </ion-list>
+</ion-content>
+

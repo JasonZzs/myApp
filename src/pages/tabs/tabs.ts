@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { HomePage } from '../home/home';
 import { ProjectsPage } from '../projects/projects';
 import { CommunityPage } from '../community/community';
-import { SeriesPage } from '../series/series';
+import { ProductPage } from '../product/product';
 import { AboutPage } from '../about/about';
 import { MinePage } from '../mine/mine';
 
@@ -17,7 +17,7 @@ import { MinePage } from '../mine/mine';
 export class TabsPage {
   tab1Root: any = HomePage;
   tab2Root: any = ProjectsPage;
-  tab3Root: any = SeriesPage;
+  tab3Root: any = ProductPage;
   tab4Root: any = CommunityPage;
   tab5Root: any = AboutPage;
   tab6Root: any = MinePage;
