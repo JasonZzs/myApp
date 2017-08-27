@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 /*页面引入*/
 import { HomePage } from '../pages/home/home';
 import { ProjectsPage } from '../pages/projects/projects';
+import { ProjectDetailPage } from '../pages/projects/project-detail/project-detail';
 import { CommunityPage } from '../pages/community/community';
 import { ProductsPage } from '../pages/products/products';
 import { ProductDetailPage } from '../pages/products/product-detail/product-detail';
@@ -46,6 +47,7 @@ export function HttpLoaderFactory(http: Http) {
     AboutPage,
     HomePage,
     ProjectsPage,
+    ProjectDetailPage,
     CommunityPage,
     ProductsPage,
     ProductDetailPage,
@@ -72,6 +74,7 @@ export function HttpLoaderFactory(http: Http) {
     AboutPage,
     HomePage,
     ProjectsPage,
+    ProjectDetailPage,
     CommunityPage,
     ProductsPage,
     ProductDetailPage,

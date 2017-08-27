@@ -1,25 +1,23 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { HttpData } from '../../providers/http-data';
 
-/**
- * Generated class for the CommunityPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-community',
   templateUrl: 'community.html',
 })
-export class CommunityPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+export class CommunityPage {
+  communityList: any;
+  constructor(
+    public httpData: HttpData,
+  ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CommunityPage');
+    this.httpData.getCommunities().subscribe((communityList: any[]) => {
+      this.communityList = communityList;
+    });
   }
 
 }

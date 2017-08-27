@@ -1,64 +1,42 @@
 <ion-header>
   <ion-navbar>
-    <img src="assets/img/logo-1.png" class="logo">
+    <img src="assets/img/sarah-avatar.png" class="logo">
   </ion-navbar>
 </ion-header>
 
 
-<ion-content class="outer-content speaker-list">
-  <ion-list [virtualScroll]="speakers">
-    <ion-grid fixed>
-      <ion-row align-items-stretch>
-
-        <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let speaker" approxItemHeight="457px">
-
-          <ion-card class="speaker-card">
-            <ion-card-header>
-              <button ion-item detail-none (click)="goToSpeakerDetail(speaker)">
-                <ion-avatar item-start>
-                  <img [src]="speaker.profilePic" alt="Speaker profile pic">
-                </ion-avatar>
-                {{speaker.name}}
-              </button>
-            </ion-card-header>
-
-            <ion-card-content class="outer-content">
-              <ion-list>
-                <button ion-item *ngFor="let session of speaker.sessions" (click)="goToSessionDetail(session)">
-                  <h3>{{session.name}}</h3>
-                </button>
-
-                <button ion-item (click)="goToSpeakerDetail(speaker)">
-                  <h3>About {{speaker.name}}</h3>
-                </button>
-              </ion-list>
-            </ion-card-content>
-
-            <ion-row no-padding>
-              <ion-col col-12 col-lg-auto text-center text-lg-left>
-                <button ion-button clear small color="primary" icon-start (click)="goToSpeakerTwitter(speaker)">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                  Tweet
-                </button>
-              </ion-col>
-              <ion-col col-12 col-lg-auto text-center>
-                <button ion-button clear small color="primary" icon-start (click)="openSpeakerShare(speaker)">
-                  <ion-icon name='share-alt'></ion-icon>
-                  Share
-                </button>
-              </ion-col>
-              <ion-col col-12 col-lg-auto text-center text-lg-right>
-                <button ion-button clear small color="primary" icon-start (click)="openContact(speaker)">
-                  <ion-icon name='chatboxes'></ion-icon>
-                  Contact
-                </button>
-              </ion-col>
-            </ion-row>
-
-          </ion-card>
-
-        </ion-col>
-      </ion-row>
+<ion-content>
+  <ion-list no-lines class="project-area">
+    <ion-item>
+      <ion-icon name="pin" item-start></ion-icon>
+      <ion-label></ion-label>
+      <ion-select>
+        <ion-option value="madison" selected>上海</ion-option>
+        <ion-option value="austin">北京</ion-option>
+        <ion-option value="chicago">南京</ion-option>
+        <ion-option value="seattle">广州</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list [virtualScroll]="projectsList">
+    <ion-grid>
+      <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let project" approxItemHeight="50px">
+        <img src="{{project.img}}" class="img_padding" (click)=openProject(project)>
+        <div class="price" style="cursor:pointer" (click)=openProject(project)>
+          <i *ngIf="project.price == ''" class="label">More</i>
+          <i *ngIf="project.price != ''" class="label">
+            <ion-icon name="logo-yen"></ion-icon>
+            {{project.price}}
+          </i>
+        </div>
+        <h3 class="h_padding">
+          {{project.name}}
+        </h3>
+        <p class="p_padding">
+          <ion-icon name="pin" item-start></ion-icon>
+          {{project.address}}
+        </p>
+      </ion-col>
     </ion-grid>
   </ion-list>
 </ion-content>

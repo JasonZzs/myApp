@@ -38,4 +38,22 @@ export class HttpData {
     }) 
   }
   /*============================Products Service End========================  */
+  /*============================Projects Service Start======================  */
+  getProjects() {
+    return this.load().map((data: any) => {
+      console.log(data.projectsList);
+      return data.projectsList;
+    }) 
+  }
+  /*============================Projects Service End========================  */
+
+  /*============================Community Service Start=====================  */
+  getCommunities() {
+    return this.load().map((data: any) => {
+      console.log(data.communityList);
+      return data.communityList;
+    }) 
+  }
+  /*============================Community Service End=======================  */
+  
 }

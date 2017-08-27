@@ -1,11 +1,18 @@
 <ion-header>
-  <ion-navbar>
-    <img src="assets/img/logo-1.png" class="logo">
-  </ion-navbar>
-</ion-header>
-
-
-
-<ion-content padding>
-
-</ion-content>
+    <ion-navbar>
+      <img src="assets/img/sarah-avatar.png" class="logo">
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-list [virtualScroll]="communityList">
+        <ion-grid>
+          <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let community" approxItemHeight="50px">
+            <img src="{{community.img}}" class="img_padding">
+            <h3 class="h_padding">{{community.title}}</h3>
+            <p class="p_padding">{{community.desc}}</p>
+          </ion-col>
+        </ion-grid>
+      </ion-list>
+    </ion-content>
+    
