@@ -55,5 +55,23 @@ export class HttpData {
     }) 
   }
   /*============================Community Service End=======================  */
+
+  /*============================Community Service Start=====================  */
+  getAboutList() {
+    return this.load().map((data: any) => {
+      console.log(data.aboutInfoList);
+      return data.aboutInfoList;
+    }) 
+  }
+  /*============================Community Service End=======================  */
+  /*============================UserInfo Service Start======================  */
+  getUserInfo() {
+    return this.load().map((data: any) => {
+      console.log(data.userInfo);
+      return data.userInfo;
+    }) 
+  }
+  /*============================UserInfo Service End========================  */
+
   
 }

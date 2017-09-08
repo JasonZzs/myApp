@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 
 export interface Slide {
@@ -16,7 +16,8 @@ export class HomePage {
   slides: Slide[];
   constructor(
     public navCtrl: NavController,
-    public translate: TranslateService
+    public translate: TranslateService,
+    private toastCtrl: ToastController
   ) {
     translate.get(["HOME_SLIDE1_TITLE",
       "HOME_SLIDE1_DESCRIPTION",
@@ -61,4 +62,21 @@ export class HomePage {
       }
     );
   }
+
+  ionViewDidLoad() {
+    //this.presentToast()
+
+  }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message:"text",
+      position: "top",
+      dismissOnPageChange: false,
+    });
+    toast.present();
+  }
+
+  
+
 }

@@ -1,9 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <img src="assets/img/logo-1.png" class="logo">
+    <img src="assets/img/sarah-avatar.png" class="logo">
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list [virtualScroll]="aboutLists">
+    <ion-grid>
+      <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let aboutList" >
+        <img *ngIf="aboutList.img!=''" src="{{aboutList.img}}" class="img_padding">
+        <h3 class="h_padding">{{aboutList.title}}</h3>
+        <p class="p_padding">
+          <ion-icon *ngIf="aboutList.img == ''"  name="pin" item-start></ion-icon>
+          {{aboutList.desc}}
+        </p>
+      </ion-col>
+    </ion-grid>
+  </ion-list>
 </ion-content>

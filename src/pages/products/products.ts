@@ -21,13 +21,14 @@ export class ProductsPage {
     public navCtrl: NavController,
     public config: Config,
     public httpData: HttpData,
-  ) {}
-
-  ionViewDidLoad() {
+  ) {
     this.httpData.getProducts().subscribe((productsList: any[]) => {
       console.log(productsList)
       this.productsList = productsList;
     });
+  }
+  ionViewDidLoad() {
+    console.log("this is product page")
   }
 
   openProduct(product: any) {

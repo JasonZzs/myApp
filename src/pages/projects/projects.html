@@ -20,7 +20,7 @@
   </ion-list>
   <ion-list [virtualScroll]="projectsList">
     <ion-grid>
-      <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let project" approxItemHeight="50px">
+      <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let project" >
         <img src="{{project.img}}" class="img_padding" (click)=openProject(project)>
         <div class="price" style="cursor:pointer" (click)=openProject(project)>
           <i *ngIf="project.price == ''" class="label">More</i>

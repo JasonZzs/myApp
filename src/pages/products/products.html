@@ -8,7 +8,7 @@
 <ion-content>
   <ion-list [virtualScroll]="productsList">
     <ion-grid>
-      <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let product" approxItemHeight="50px" (click)="openProduct(product)">
+      <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let product" (click)="openProduct(product)">
         <img src="{{product.img}}" class="img_padding">
         <h3 class="h_padding">{{product.title}}</h3>
         <p class="p_padding">{{product.desc}}</p>

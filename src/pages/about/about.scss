@@ -1,3 +1,16 @@
 page-about {
-
+  .img_padding {
+    padding: 5px 20px;
+    height: 230px;
+    width: 100%;
+  }
+  .h_padding {
+    padding: 0 20px; 
+  }
+  .p_padding {
+    padding: 0 20px; 
+    ion-icon {
+      color: #c58d5d;
+    }
+  }
 }

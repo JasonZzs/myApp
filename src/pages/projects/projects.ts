@@ -9,17 +9,19 @@ import { ProjectDetailPage } from './project-detail/project-detail';
 })
 export class ProjectsPage {
 
-  projectsList: any[] = [];
+  projectsList: any[];
 
   constructor(
     public navCtrl: NavController,
     public httpData: HttpData,
-  ) {}
-
-  ionViewDidLoad() {
+  ) {
     this.httpData.getProjects().subscribe((projectsList: any[]) => {
       this.projectsList = projectsList;
     });
+  }
+
+  ionViewDidLoad() {
+    console.log("this is project page")
   }
 
   openProject(project: any) {
